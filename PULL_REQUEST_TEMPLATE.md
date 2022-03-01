@@ -1,4 +1,4 @@
-# [name of project] 🌎
+# [sunday] 📰
 
 - [ ] Feature PR [🧩]
 - [ ] Refactor PR [⚙️]
