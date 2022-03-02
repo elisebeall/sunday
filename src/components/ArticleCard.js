@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+// import { Fragment } from 'react';
 import { v4 as uuid } from 'uuid';
 import '../css/ArticleCard.css';
 
@@ -18,11 +18,7 @@ const ArticleCard = ({ article }) => {
   } = article;
 
   const displayThumbnail = multimedia.map(image => {
-    if (image.format === 'Large Thumbnail') {
-      return <img src={image.url} alt={image.caption} key={uuid()}/>
-    } else {
-      return null;
-    }
+    return image.format === 'Large Thumbnail' ? <img src={image.url} alt={image.caption} key={uuid()}/> : null;
   })
 
   return (
