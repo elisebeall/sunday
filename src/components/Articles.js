@@ -21,9 +21,9 @@ const Articles = () => {
 
   return (
     <>
-      {error ? <Error error={error} /> :
+      {isLoading ? <Loading /> :
         <>
-          {isLoading ? <Loading /> :
+          {error ? <Error error={error} /> :
             <>
               {displayArticlesList}
             </>

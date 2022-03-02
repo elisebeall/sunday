@@ -23,10 +23,10 @@ const ArticleCard = ({ article }) => {
 
   return (
     <article>
-      <title>{section}</title>
+      {section}
       {displayThumbnail}
-      <h3><a href={url}>{title}</a></h3>
-      <h4>{abstract}</h4>
+      <a href={url}>{title}</a>
+      {abstract}
     </article>
   )
 }
