@@ -1,19 +1,28 @@
 import { Fragment } from 'react';
-import { Router, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Nav from './Nav';
+import Main from './Main';
+import Articles from './Articles';
+import ArticleDetails from './ArticleDetails';
+import NotFound from './NotFound';
 import '../css/App.css';
 
 const App = () => {
   return (
     <>
-      <head>
-        <h1>sunday</h1>
-      </head>
+      <nav>
+        <Nav />
+      </nav>
       <main>
-        <Router>
-          <Route to="/" element={<Main />} />
-          <Route to="/articles/:id" element={<ArticleDetails />} />
-        </Router>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/:section" element={<Articles />} />
+          <Route path="/articles/:id" element={<ArticleDetails />} />
+          <Route path="/404" element={<NotFound />} />
+        </Routes>
       </main>
-    <>
+    </>
   )
 }
+
+export default App;
