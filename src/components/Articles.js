@@ -9,7 +9,10 @@ import endpoints from '../endpoints.js';
 import '../css/Articles.css';
 
 const Articles = () => {
-  const section = useParams().section;
+  let { section } = useParams();
+  if (!section) {
+    section = 'home';
+  }
   const { data, isLoading, error } = useFetch(endpoints[`${section}`]);
   let articles, displayArticlesList;
 
@@ -22,7 +25,7 @@ const Articles = () => {
   }
 
   return (
-    <>
+    <div className="articles-container">
       {isLoading ? <Loading /> :
         <>
           {error ? <Error error={error} /> :
@@ -32,7 +35,7 @@ const Articles = () => {
           }
         </>
       }
-    </>
+    </div>
   )
 }
 
