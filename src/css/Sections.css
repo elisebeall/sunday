@@ -1,0 +1,11 @@
+nav {
+  position: fixed;
+  overflow: visible;
+  top: 15%;
+  grid-column: 1;
+  grid-row: 2;
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7rem;
+}

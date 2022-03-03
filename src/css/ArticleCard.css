@@ -1,0 +1,13 @@
+article {
+  margin: 3rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(81, 80, 82, 0.2);
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(81, 80, 82, 0.3);
+}
+
+h3 {
+  font-weight: 400;
+}

@@ -1,5 +1,5 @@
 // import { Fragment } from 'react';
-import { v4 as uuid } from 'uuid';
+// import { v4 as uuid } from 'uuid';
 import '../css/ArticleCard.css';
 
 const ArticleCard = ({ article }) => {
@@ -17,16 +17,15 @@ const ArticleCard = ({ article }) => {
     multimedia
   } = article;
 
-  const displayThumbnail = multimedia.map(image => {
-    return image.format === 'Large Thumbnail' ? <img src={image.url} alt={image.caption} key={uuid()}/> : null;
+  const displayThumbnail = multimedia.find(image => {
+    return image.format === 'Large Thumbnail';
   })
 
   return (
     <article>
-      {section}
-      {displayThumbnail}
-      <a href={url}>{title}</a>
-      {abstract}
+      <h3>{section}</h3>
+      <a href={url}><h2>{title}</h2></a>
+      <img src={displayThumbnail.url} alt={title} />
     </article>
   )
 }

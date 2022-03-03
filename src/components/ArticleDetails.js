@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import '../css/ArticleDetails';
+import '../css/ArticleDetails.css';
 
 const ArticleDetails = () => {
   return (
