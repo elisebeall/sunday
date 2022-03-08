@@ -11,8 +11,8 @@ const usePath = (path) => {
     } else {
       !sectionsList.includes(path) ? setPathError(true) : setSection(path);
     }
-  })
-  
+  }, [path])
+
   return { section, pathError };
 }
 
