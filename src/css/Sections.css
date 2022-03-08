@@ -1,9 +1,4 @@
-nav {
-  position: fixed;
-  overflow: visible;
-  top: 15%;
-  grid-column: 1;
-  grid-row: 2;
+.sections-nav {
   margin-left: 0.5rem;
   display: flex;
   flex-direction: column;
