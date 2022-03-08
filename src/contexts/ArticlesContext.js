@@ -22,6 +22,7 @@ const ArticlesContextProvider = (props) => {
         sectionArticles,
         setSectionArticles,
         filteredArticles,
+        setFilteredArticles,
         searchArticles
       }}>
         { props.children }
