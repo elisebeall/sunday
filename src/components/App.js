@@ -1,26 +1,26 @@
-import { Fragment } from 'react';
+import ArticlesContextProvider from '../contexts/ArticlesContext';
 import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Sections from './Sections';
 import Articles from './Articles';
 import ArticleDetails from './ArticleDetails';
-import NotFound from './NotFound';
 import '../css/App.css';
 
 const App = () => {
   return (
-    <div className="app-container">
-      <Header />
-      <Sections />
+    <ArticlesContextProvider>
+      <nav>
+        <Header />
+        <Sections />
+      </nav>
       <main>
         <Routes>
           <Route path="/" element={<Articles />} />
           <Route path="/:section" element={<Articles />} />
-          <Route path="/articles/:id" element={<ArticleDetails />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/:section/:title" element={<ArticleDetails />} />
         </Routes>
       </main>
-    </div>
+    </ArticlesContextProvider>
   )
 }
 

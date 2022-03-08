@@ -11,16 +11,13 @@ const myKey = 'PcxvOCuS1z1KXwNTHGzuGd5rxWZp2UeM';
 const baseUrl = 'https://api.nytimes.com/svc/topstories/v2/';
 const jsonUrl = '.json?api-key=';
 
-const getSections = () => {
-  return sections.reduce((acc, section) => {
-    if (!acc[section]) {
-      acc[section] = '';
-    }
-    acc[section] = baseUrl+section+jsonUrl+myKey;
-    return acc;
-  }, {})
-}
+const endpoints = sections.reduce((acc, section) => {
+  if (!acc[section]) {
+    acc[section] = '';
+  }
+  acc[section] = baseUrl+section+jsonUrl+myKey;
+  return acc;
+}, {})
 
-const endpoints = getSections();
 
 export default endpoints;

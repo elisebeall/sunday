@@ -15,9 +15,9 @@ const Sections = () => {
   })
 
   return (
-    <nav>
+    <div className="sections-nav">
       {displaySections}
-    </nav>
+    </div>
   )
 }
 

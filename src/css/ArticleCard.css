@@ -1,4 +1,4 @@
-article {
+.article-card {
   margin: 3rem;
   padding: 3rem;
   display: flex;
@@ -6,8 +6,9 @@ article {
   justify-content: space-between;
   border: 1px solid rgba(81, 80, 82, 0.2);
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(81, 80, 82, 0.3);
+  cursor: pointer;
 }
 
-h3 {
+.article-card-section {
   font-weight: 400;
 }

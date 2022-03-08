@@ -1,31 +1,27 @@
-// import { Fragment } from 'react';
-// import { v4 as uuid } from 'uuid';
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ArticlesContext } from '../contexts/ArticlesContext';
 import '../css/ArticleCard.css';
 
 const ArticleCard = ({ article }) => {
-  const {
-    section,
-    title,
-    abstract,
-    url,
-    byline,
-    kicker,
-    des_facet,
-    org_facet,
-    per_facet,
-    geo_facet,
-    multimedia
-  } = article;
+  const navigate = useNavigate();
+  const { setArticle } = useContext(ArticlesContext);
+  const { section, title, multimedia } = article;
 
-  const displayThumbnail = multimedia.find(image => {
+  const setArticleDetails = () => {
+    setArticle(article);
+    navigate(`/${section}/${title}`);
+  }
+
+  const thumbnail = multimedia?.find(image => {
     return image.format === 'Large Thumbnail';
   })
 
   return (
-    <article>
-      <h3>{section}</h3>
-      <a href={url}><h2>{title}</h2></a>
-      <img src={displayThumbnail.url} alt={title} />
+    <article className="article-card">
+      <h3 className="article-card-section">{section}</h3>
+      <h2 onClick={() => setArticleDetails()}>{title}</h2>
+      <img src={thumbnail?.url} alt={thumbnail?.caption} />
     </article>
   )
 }

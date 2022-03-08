@@ -1,0 +1,45 @@
+.image-container {
+  position: fixed;
+  z-index: -1;
+  filter: opacity(0.7);
+}
+
+.bg-image {
+  object-fit: cover;
+}
+
+.article-details-container {
+  margin: 3rem;
+  padding: 3rem;
+  border: 1px solid rgba(81, 80, 82, 0.2);
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(81, 80, 82, 0.3);
+  background-color: rgba(255, 255, 250, 0.7);
+  width: 50%;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+}
+
+.details-title {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.details-byline {
+  font-weight: 400;
+}
+
+.details-abstract {
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+
+.details-tags {
+  padding: 2rem 2rem 0 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+span {
+ font-weight: 800;
+}
